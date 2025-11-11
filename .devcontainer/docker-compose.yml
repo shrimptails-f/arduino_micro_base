@@ -1,0 +1,16 @@
+version: "3"
+services:
+  arduino:
+    build:
+      context: ../
+      dockerfile: .devcontainer/infra/arduino/Dockerfile
+      args:
+        - APP_ROOT=$APP_ROOT
+    env_file:
+      - .env
+    tty: true
+    ports:
+      - $DEBUG_PORT:$DEBUG_PORT
+    volumes:
+      - ../:$APP_ROOT
+      - ~/.gitconfig:$APP_ROOT/.gitconfig

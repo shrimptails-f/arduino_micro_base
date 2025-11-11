@@ -1,0 +1,16 @@
+{
+    "name": "Arduino Micro Base",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "arduino",
+    "workspaceFolder": "/home/dev/src",
+    "postCreateCommand": "task setup",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "editorconfig.editorconfig", // エディタを跨いだ共通設定ファイルをVsCodeで実行するのに必要
+                "ms-azuretools.vscode-docker", // VsCodeでのIntelliSenseやタブ補完用
+                "streetsidesoftware.code-spell-checker" // タイポチェック
+            ]
+        }
+    }
+}

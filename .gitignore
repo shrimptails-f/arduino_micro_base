@@ -1,0 +1,23 @@
+.env
+
+# ビルドファイル
+main
+
+# node
+node_modules
+
+#AIエージェント
+tasks
+.claude-local
+.claude/settings.local.json
+
+
+# 多分コンテナ作成時に勝手に作成されるキャッシュなので除外
+.attach_pid*
+
+# GoLand用のリモートコンテナ作成時勝手に作成されるので削除。
+.idea
+ide
+
+# 恐らくWindowsユーザーに使用中と解釈されWSL2配置時にgit configコマンドが失敗してしまうのでマウントした際の差分を無視する用。
+.gitconfig
