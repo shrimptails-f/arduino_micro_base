@@ -25,3 +25,8 @@ tasks:
     desc: "C言語のプログラムファイルをコンパイルします {{.APP_ROOT}}/main.c → main"
     cmds:
       - gcc -g {{.APP_ROOT}}/main.c -o main
+
+  cpp:
+    desc: "C言語のプログラムファイルをコンパイルします {{.APP_ROOT}}/src.ino、main.cpp → main"
+    cmds:
+      - arduino-cli compile --fqbn arduino:avr:micro {{.APP_ROOT}}
