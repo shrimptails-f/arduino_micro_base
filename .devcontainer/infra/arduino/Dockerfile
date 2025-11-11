@@ -10,19 +10,27 @@ ENV TZ=Asia/Tokyo \
 # 共通パッケージをまとめてインストール
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
-      locales \
-      vim \
-      keychain \
-      ripgrep \
-      sudo \
-      curl \
-      ca-certificates \
-      gnupg \
-      python3 && \
+    locales \
+    vim \
+    keychain \
+    ripgrep \
+    sudo \
+    curl \
+    ca-certificates \
+    gnupg \
+    python3 \
+    gcc-avr \
+    gdb \
+    avr-libc \
+    avrdude \
+    make \
+    clang-format \
+    cppcheck \
+    git && \
     localedef -i ja_JP -c -f UTF-8 -A /usr/share/locale/locale.alias ja_JP.UTF-8 && \
-    curl -sL "https://github.com/go-task/task/releases/download/v3.9.0/task_linux_amd64.deb" -o task.deb && \
-    dpkg -i task.deb && \
-    rm task.deb && \
+    curl -fsSL "https://github.com/go-task/task/releases/download/v3.9.0/task_linux_amd64.deb" -o /tmp/task.deb && \
+    apt-get install -y /tmp/task.deb && \
+    rm -f /tmp/task.deb && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 

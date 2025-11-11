@@ -21,3 +21,7 @@ tasks:
     cmds:
       - codex --dangerously-bypass-approvals-and-sandbox
 
+  c:
+    desc: "C言語のプログラムファイルをコンパイルします {{.APP_ROOT}}/main.c → main"
+    cmds:
+      - gcc -g {{.APP_ROOT}}/main.c -o main
