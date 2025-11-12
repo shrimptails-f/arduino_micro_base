@@ -57,17 +57,9 @@ RUN groupadd -g 1000 dev && \
 RUN mkdir -p /home/dev/.vscode-server/bin /home/dev/.vscode-server/extensions && \
     chown -R dev:dev /home/dev/.vscode-server
 
-# arduino-cli
-RUN curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | BINDIR=/bin sh
-
 WORKDIR $APP_ROOT
 
 USER dev
-
-# arduino-cliで必要なものをインストール
-RUN arduino-cli config init && \
-    arduino-cli core update-index && \
-    arduino-cli core install arduino:avr
 
 # bashrc 設定
 COPY --chown=dev:dev .devcontainer/infra/arduino/.bashrc /home/dev/.bashrc

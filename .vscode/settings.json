@@ -5,6 +5,8 @@
     "editor.wordSeparators": "`*&~!$#%^=+[{()]}/\\|;:'\",.<>?",
     // スペルチェックの除外単語設定
     "cSpell.ignoreWords": [
+        // ハードウェア関連
+        "usbipd",
         // C言語関連
         "xaver",
         "mosapride",

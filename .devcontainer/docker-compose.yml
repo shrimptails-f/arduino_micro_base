@@ -9,9 +9,6 @@ services:
     env_file:
       - .env
     tty: true
-    ports:
-      - $DEBUG_PORT:$DEBUG_PORT
     volumes:
       - ../:$APP_ROOT
-      - "/dev/ttyS3:/dev/ttyS3"
       - ~/.gitconfig:$APP_ROOT/.gitconfig

@@ -9,9 +9,10 @@
             "extensions": [
                 "editorconfig.editorconfig", // エディタを跨いだ共通設定ファイルをVsCodeで実行するのに必要
                 "ms-azuretools.vscode-docker", // VsCodeでのIntelliSenseやタブ補完用
+                "p1c2u.docker-compose", // docker-composeフォーマット、サジェスト
                 "mosapride.zenkaku", // 全角ハイライト
                 "streetsidesoftware.code-spell-checker", // タイポチェック
-                "ms-vscode.cpptools-extension-pack", // C/C++の人気拡張機能セット リンタ デバッガが含まれている
+                // "ms-vscode.cpptools-extension-pack", // C/C++の人気拡張機能セット リンタ デバッガが含まれている
                 "xaver.clang-format", // フォーマッタ
                 "vscode-arduino.vscode-arduino-community" // ボード/ライブラリマネージャ、スケッチのビルド&アップロード
             ]
